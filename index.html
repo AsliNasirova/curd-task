@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<style>
+    body {
+    background: #283c86;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #45a247, #283c86);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #45a247, #283c86);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+form {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 8px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    color: white;
+    /* background-color: rgb(81, 124, 98); */
+    background: #9CECFB;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+input {
+    width: 80%;
+    height: 30px;
+    border-radius: 8px;
+    border-color: rgb(26, 112, 112);
+  
+}
+
+#table {
+    background-color: aliceblue;
+    margin: auto;
+    opacity: 0;
+    transition: 0,3s;
+}
+
+#create,
+#update {
+    padding: 10px 60px;
+    margin-bottom: 10px;
+    border-radius: 35px;
+    color: white;
+    border-style: groove;
+    border-color: rgb(28, 114, 107);
+}
+
+button {
+    color: rgb(2, 127, 127);
+    background-color: transparent;
+}
+
+.active#table {
+    opacity: 1;
+    transition: 0.4s;
+    transform: translateY(80px);
+}
+
+#view {
+    padding: 10px 40px;
+    margin-top: 30px;
+    border-radius: 40px;
+    margin-left: 45%;
+
+}
+</style>
+<body>
+    <form action="">
+        <label for="">Name:</label><br>
+        <input type="text" id="inpName" placeholder="Please, Enter Name!"><br>
+        <label for="">Quantity:</label><br>
+        <input type="text" id="inpQuan" placeholder="Please, Enter Quantity!"><br>
+        <label for="">Unit Price:</label><br>
+        <input type="text" id="inpPrice" placeholder="Please, Enter price!"><br>
+        <button id="create">Create</button>
+        <button id="update">Update</button>
+    </form>
+    <button id="view">View data</button>
+    <table id="table" border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>unitPrice</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
